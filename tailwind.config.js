@@ -4,7 +4,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTempateColumns: {
+        NavButton: '100px 1fr',
+      },
+      fontFamily: {
+        Montserrat: [`"Montserrat"`],
+      },
+    },
   },
   plugins: [],
 }
