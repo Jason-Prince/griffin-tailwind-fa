@@ -57,28 +57,16 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <>
-      <nav className="px-2 w-screen bg-slate-300 grid grid-cols-12 place-content-center place-items-center fixed py-3">
+      <nav className="px-2 w-screen bg-slate-300 grid grid-cols-12 place-content-center place-items-center sticky top-0 z-50 py-3">
         <div className="pt-2 col-start-1 col-end-11 row-start-1 sm:col-end-8 md:col-end-6 lg:col-start-5 lg:col-end-9">
-          <Image
-            src="/Full GEC Logo.png"
-            width={9578}
-            height={712}
-            alt="logo"
-          />
+          <Image src="/Full GEC Logo.png" width={9578} height={712} alt="logo" />
         </div>
-        {isMenuOpen ? (
-          <FontAwesomeIcon
-            onClick={() => setIsMenuOpen(false)}
-            icon={faTimes}
-            className="text-2xl col-start-12 col-end-13 row-start-1 col-span-2 sm:col-span-1 sm:col-start-12 hover:text-gray-600 cursor-pointer lg:hidden"
-          />
-        ) : (
-          <FontAwesomeIcon
-            onClick={() => setIsMenuOpen(true)}
-            icon={faBars}
-            className="text-xl col-start-12 col-end-13 row-start-1 col-span-2 sm:col-span-1 sm:col-start-12 hover:text-gray-600 cursor-pointer lg:hidden"
-          />
-        )}
+
+        <FontAwesomeIcon
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          icon={isMenuOpen ? faTimes : faBars}
+          className="text-2xl col-start-12 col-end-13 row-start-1 col-span-2 sm:col-span-1 sm:col-start-12 hover:text-gray-600 cursor-pointer lg:hidden"
+        />
 
         <div
           className={`${
