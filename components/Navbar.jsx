@@ -57,15 +57,15 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <>
-      <nav className="px-2 w-screen bg-white grid grid-cols-12 place-content-center place-items-center sticky top-0 z-50 py-3">
-        <div className="pt-2 col-start-1 col-end-11 row-start-1 sm:col-end-8 md:col-end-6 nav:col-start-5 nav:col-end-9">
+      <nav className="sticky top-0 z-50 grid w-screen grid-cols-12 px-2 py-3 bg-white place-content-center place-items-center">
+        <div className="col-start-1 col-end-11 row-start-1 pt-2 sm:col-end-8 md:col-end-6 nav:col-start-5 nav:col-end-9">
           <Image src="/Full GEC Logo.png" width={9578} height={712} alt="logo" />
         </div>
 
         <FontAwesomeIcon
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           icon={isMenuOpen ? faTimes : faBars}
-          className="text-2xl col-start-12 col-end-13 row-start-1 col-span-2 sm:col-span-1 sm:col-start-12 hover:text-orange-focus cursor-pointer nav:hidden"
+          className="col-span-2 col-start-12 col-end-13 row-start-1 text-2xl cursor-pointer sm:col-span-1 sm:col-start-12 hover:text-orange-focus nav:hidden"
         />
 
         <div
@@ -75,12 +75,12 @@ export default function Navbar() {
         >
           {links.map((link) => (
             <Link href={link.href} key={link.name}>
-              <div className="text-dark border-l-2 nav:border-l-0 nav:border-b-2 border-white hover:border-orange border-solid  cursor-pointer py-2 px-4 flex place-items-center nav:rounded nav:flex">
+              <div className="flex px-4 py-2 border-l-2 border-white border-solid cursor-pointer text-dark nav:border-l-0 nav:border-b-2 hover:border-orange place-items-center nav:rounded nav:flex">
                 <FontAwesomeIcon
                   icon={link.icon}
-                  className=" col-start-6 col-end-7 mr-2 nav:flex nav:flex-auto nav:mr-2"
+                  className="col-start-6 col-end-7 mr-2  nav:flex nav:flex-auto nav:mr-2"
                 />
-                <a className="font-Montserrat tracking-wider uppercase col-start-7 col-end-8 row-start-1 nav:col-start-1 nav:col-span-12 place-self-start nav:place-self-center ">
+                <a className="col-start-7 col-end-8 row-start-1 tracking-wider uppercase font-Montserrat nav:col-start-1 nav:col-span-12 place-self-start nav:place-self-center ">
                   {link.name}
                 </a>
               </div>

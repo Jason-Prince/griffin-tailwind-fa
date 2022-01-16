@@ -52,7 +52,7 @@ const BemCard = () => {
   return (
     <div className="grid grid-cols-12 m-4 mb-20">
       {/* carousel */}
-      <div className="col-start-1 col-end-13 row-start-1 row-end-2 nav:col-start-1 nav:col-end-5 grid grid-cols-1 auto-rows-fr relative justify-center items-center gap-4">
+      <div className="relative grid items-center justify-center grid-cols-1 col-start-1 col-end-13 row-start-1 row-end-2 gap-4 nav:col-start-1 nav:col-end-5 auto-rows-fr">
         {/* title */}
         <div className="w-[350px] justify-self-center text-center text-light font-Montserrat uppercase text-2xl tracking-wider col-start-1 col-end-2 row-start-1 row-end-2 pb-64 z-10">
           {slides.map(({ title }, index) => (
@@ -64,14 +64,14 @@ const BemCard = () => {
         {/* prevChevron */}
         <div
           onClick={prevSlide}
-          className=" text-green hover:text-green-focus text-4xl cursor-pointer col-start-1 col-end-2 row-start-1 row-end-2 justify-self-center mr-80 z-20"
+          className="z-20 col-start-1 col-end-2 row-start-1 row-end-2 text-4xl cursor-pointer text-green hover:text-green-focus justify-self-center mr-80"
         >
           <FontAwesomeIcon icon={faChevronCircleLeft} />
         </div>
         {/* nextChevron */}
         <div
           onClick={nextSlide}
-          className="text-green hover:text-green-focus text-4xl cursor-pointer col-start-1 col-end-2 row-start-1 row-end-2 justify-self-center ml-80 z-20"
+          className="z-20 col-start-1 col-end-2 row-start-1 row-end-2 text-4xl cursor-pointer text-green hover:text-green-focus justify-self-center ml-80"
         >
           <FontAwesomeIcon icon={faChevronCircleRight} />
         </div>
@@ -86,14 +86,14 @@ const BemCard = () => {
                   height={313}
                   alt={title}
                   layout="intrinsic"
-                  className="rounded self-center animate-flash"
+                  className="self-center rounded animate-flash"
                 />
               )}
             </div>
           ))}
         </div>
         {/* pagination */}
-        <div className="text-green text-center text-xl col-start-1 col-end-2 row-start-1 row-end-2 pt-64 z-10">
+        <div className="z-10 col-start-1 col-end-2 row-start-1 row-end-2 pt-64 text-xl text-center text-green">
           {slides.map((slide, index) => (
             <FontAwesomeIcon
               key={index}
@@ -106,14 +106,14 @@ const BemCard = () => {
       {bem.map(({ title, p, bulltes }, index) => (
         <div
           key={index}
-          className="col-start-1 col-end-13 row-start-2 row-end-3  nav:col-start-5 nav:col-end-13 nav:row-start-1 nav:row-end-2 ml-4"
+          className="col-start-1 col-end-13 row-start-2 row-end-3 ml-4 nav:col-start-5 nav:col-end-13 nav:row-start-1 nav:row-end-2"
         >
-          <h3 className="font-Montserrat text-5xl text-blue pb-4">{title}</h3>
-          <div className="text-dark font-Roboto text-2xl pb-4">{p}</div>
+          <h3 className="pb-4 text-5xl font-Montserrat text-blue">{title}</h3>
+          <div className="pb-4 text-2xl text-dark font-Roboto">{p}</div>
           <div>
             {bulltes.map(({ title, link }, index) => (
               <div
-                className="text-dark px-2 border-l-2 border-white font-Roboto text-2xl hover:border-orange"
+                className="px-2 text-2xl border-l-2 border-white text-dark font-Roboto hover:border-orange"
                 key={index}
               >
                 <a href={link}>{title}</a>

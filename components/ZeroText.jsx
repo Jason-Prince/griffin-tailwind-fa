@@ -11,17 +11,21 @@ const ZeroText = ({ data }) => {
     note,
     paragraph,
     credits,
+    p1,
+    p2,
+    p3,
+    credentials,
   } = data
   return (
-    <div className="grid grid-cols-12 gap-2 m-auto nav:text-2xl">
+    <div className="grid grid-cols-12 gap-2 m-auto gap-y-4 nav:text-2xl font-Roboto">
       {title && (
-        <h3 className="col-start-1 col-end-13 row-start-1 tracking-normal font-Roboto nav:text-4xl text-blue">
+        <h3 className="col-start-1 col-end-13 row-start-1 text-3xl tracking-normal font-Montserrat nav:text-4xl text-blue">
           {title}
         </h3>
       )}
       {paragraph && (
-        <div className="col-start-1 py-10 col-span-full font-Roboto">
-          <p className="self-center nav:text-2xl font-Roboto">{paragraph}</p>
+        <div className="col-start-1 px-4 py-10 col-span-full">
+          <p className="self-center nav:text-2xl">{paragraph}</p>
         </div>
       )}
       {project && (
@@ -60,6 +64,14 @@ const ZeroText = ({ data }) => {
             <p className="text-center font-roboto">{p}</p>
           </div>
         ))}
+      {p1 && <p className="col-start-1 col-end-13 row-start-2 ">{p1}</p>}
+      {p2 && <p className="col-start-1 col-end-13 row-start-3 ">{p2}</p>}
+      {p3 && <p className="col-start-1 col-end-13 row-start-4 ">{p3}</p>}
+      {credentials && (
+        <p className="col-start-1 col-end-13 row-start-3 font-Montserrat text-blue">
+          {credentials}
+        </p>
+      )}
     </div>
   )
 }

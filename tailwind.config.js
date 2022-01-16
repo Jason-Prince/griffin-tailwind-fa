@@ -6,8 +6,8 @@ module.exports = {
         NavButton: '100px 1fr',
       },
       fontFamily: {
-        Montserrat: [`"Montserrat"`],
-        Roboto: [`Roboto`],
+        Montserrat: [`'Montserrat', sans-serif`],
+        Roboto: [`'Roboto', sans-serif`],
       },
       keyframes: {
         flash: {

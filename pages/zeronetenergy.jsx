@@ -12,16 +12,18 @@ import ZeroEnergyCert from '../components/ZeroEnergyCert'
 
 const zne = [
   {
-    title: 'ZNE Guide Gas Electric',
+    alt: 'ZNE Guide Gas Electric',
     src: '/ZNE Guide_print_Gas_Electric_final.jpg',
     width: 5100,
     height: 3300,
+    layout: 'intrinsic',
   },
   {
-    title: 'ZNE Guide Single Family',
+    alt: 'ZNE Guide Single Family',
     src: '/ZNE Guide_Print_SingleFamily.png',
     width: 3400,
     height: 2200,
+    layout: 'intrinsic',
   },
   {
     paragraphs: [
@@ -79,31 +81,13 @@ const green_globes = {
     location: 'Las Vegas, NV',
   },
 }
-const lincolnLane = [
-  {
-    images: [
-      {
-        title: 'Lincoln Lane',
-        src: '/Lincoln.jpg',
-        width: 1600,
-        height: 1200,
-      },
-    ],
-    title: 'ILFI Zero Energy',
-    project: 'Lincoln Lane',
-    level: 'Full',
-    approach: 'On-site Generation',
-    status: 'Verified',
-    location: 'Holladay, UT',
-  },
-]
 const infographic_1 = {
   image: {
     alt: 'ZNE Guide Gas Electric',
     src: '/ZNE Guide_print_Gas_Electric_final.jpg',
     width: 5100,
     height: 3300,
-    layout: 'intrinsic',
+    layout: 'responsive',
   },
   title: 'ZNE Multifamily Infographic',
 }
@@ -125,9 +109,6 @@ const infographic_content = {
     infographics.`,
   p2: `The results of the effort was in the form of interactive, web-capable
     infographics for both single family homes and multi-family projects.`,
-}
-const cta = {
-  text: 'Start your project today',
 }
 const zero_energy_certification = {
   image: {
@@ -255,7 +236,7 @@ const ZeroNetEnergy = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-12 gap-20 mx-4 nav:gap-4">
+      <div className="grid grid-cols-12 mx-4 gap-y-10 nav:gap-20">
         <div className="col-start-1 row-start-1 col-span-full">
           <Section text={'Zero Net Energy'} />
         </div>

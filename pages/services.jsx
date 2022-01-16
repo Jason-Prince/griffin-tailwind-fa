@@ -6,27 +6,27 @@ const Services = () => {
   return (
     <div>
       <Navbar />
-      <div className="col-start-1 col-end-13 row-start-1 row-end-2 grid grid-cols-12">
-        <h1 className=" col-start-4 col-end-10 font-robot text-5xl font-bold tracking-wide self-center text-center border-2 border-solid border-dark p-10">
+      <div className="grid grid-cols-12 col-start-1 col-end-13 row-start-1 row-end-2">
+        <h1 className="self-center col-start-4 col-end-10 p-10 text-5xl font-bold tracking-wide text-center border-2 border-solid  font-Montserrat border-dark">
           Services
         </h1>
       </div>
       <BemCard />
       <HersCard />
-      <div className="col-start-1 col-end-13 grid grid-cols-12 bg-dark p-6">
-        <h3 className="col-start-1 col-end-13 text-center text-4xl text-white font-Roboto pb-6">
+      <div className="grid grid-cols-12 col-start-1 col-end-13 p-6 bg-dark">
+        <h3 className="col-start-1 col-end-13 pb-6 text-4xl text-center text-white font-Roboto">
           Contact
         </h3>
-        <p className="col-start-1 col-end-13 text-center text-xl text-white font-Roboto">
+        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
           801.872.9786
         </p>
-        <p className="col-start-1 col-end-13 text-center text-xl text-white font-Roboto">
+        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
           info@griffinec.com
         </p>
-        <p className="col-start-1 col-end-13 text-center text-xl text-white font-Roboto">
+        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
           303 N 350 W
         </p>
-        <p className="col-start-1 col-end-13 text-center text-xl text-white font-Roboto">
+        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
           Bountiful, UT 84010
         </p>
       </div>

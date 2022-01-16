@@ -33,7 +33,7 @@ const ZeroEnergyCard = ({ data }) => {
               : text.credits
               ? 'col-end-12 col-start-2 row-start-1'
               : 'text-center nav:text-left col-span-full nav:col-span-4 col-start-1 nav:col-start-6 row-start-2 nav:row-start-1'
-          }`}
+          } text-xl`}
         >
           <ZeroText data={text} />
         </div>
