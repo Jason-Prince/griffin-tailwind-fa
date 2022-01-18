@@ -1,4 +1,5 @@
 import BemCard from '../components/BemCard'
+import Footer from '../components/Footer'
 import HersCard from '../components/HersCard'
 import Navbar from '../components/Navbar'
 
@@ -13,23 +14,7 @@ const Services = () => {
       </div>
       <BemCard />
       <HersCard />
-      <div className="grid grid-cols-12 col-start-1 col-end-13 p-6 bg-dark">
-        <h3 className="col-start-1 col-end-13 pb-6 text-4xl text-center text-white font-Roboto">
-          Contact
-        </h3>
-        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
-          801.872.9786
-        </p>
-        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
-          info@griffinec.com
-        </p>
-        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
-          303 N 350 W
-        </p>
-        <p className="col-start-1 col-end-13 text-xl text-center text-white font-Roboto">
-          Bountiful, UT 84010
-        </p>
-      </div>
+      <Footer />
     </div>
   )
 }

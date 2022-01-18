@@ -7,6 +7,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
+import Link from 'next/link'
 import { faCircle as faCircle2 } from '@fortawesome/free-regular-svg-icons'
 
 const slides = [
@@ -20,10 +21,10 @@ const bem = [
     title: 'Building Energy Modeling',
     p: 'A whole building energy model affords both the design team and the owner guidance on where financial assets are best spent to yield a better product. This guidance can be in the form of utility incentive quantification, operational cost reduction, simple payback and/or life-cycle cost analysis. Additional benefits include code compliance ',
     bulltes: [
-      { title: 'Zero Net Energy Design', link: '#zeronetenergy' },
-      { title: 'Third Party Certifications', link: '#buildingcertification' },
-      { title: 'Latitude Study', link: '' },
-      { title: 'Life-Cycle Cost Analysis', link: '' },
+      { title: 'Zero Net Energy Design', link: '/zeronetenergy' },
+      { title: 'Third Party Certifications', link: '/buildingcertification' },
+      { title: 'Latitude Study', link: '#' },
+      { title: 'Life-Cycle Cost Analysis', link: '#' },
       {
         title: 'Utility Incentive | Rocky Mountain Power | Wattsmart',
         link: 'https://www.rockymountainpower.net/savings-energy-choices/business/wattsmart-efficiency-incentives-utah.html',
@@ -32,8 +33,8 @@ const bem = [
         title: 'Utility Incentive | Dominion | ThermWise',
         link: 'https://www.dominionenergy.com/utah/save-energy/thermwise',
       },
-      { title: 'HVAC Size Reduction', link: '' },
-      { title: 'Energy Code Performance Compliance', link: '' },
+      { title: 'HVAC Size Reduction', link: '#' },
+      { title: 'Energy Code Performance Compliance', link: '#' },
     ],
   },
 ]
@@ -116,7 +117,15 @@ const BemCard = () => {
                 className="px-2 text-2xl border-l-2 border-white text-dark font-Roboto hover:border-orange"
                 key={index}
               >
-                <a href={link}>{title}</a>
+                {index === 4 || index === 5 ? (
+                  <Link passHref href={link}>
+                    <a target="_blank">{title}</a>
+                  </Link>
+                ) : (
+                  <Link passHref href={link}>
+                    <a>{title}</a>
+                  </Link>
+                )}
               </div>
             ))}
           </div>
