@@ -5,7 +5,7 @@ import ZeroText from './ZeroText'
 const BuildingCertificationCard = ({ data }) => {
   const { image, text } = data
   return (
-    <div className="grid items-center justify-center grid-cols-12 nav:gap-x-10 nav:gap-y-5">
+    <div className="mx-4 grid items-center justify-center grid-cols-12 nav:gap-x-10 nav:gap-y-5">
       {image && (
         <div className="col-start-1 row-start-1 col-span-full nav:justify-self-center nav:col-span-5">
           <NextImage image={image} />

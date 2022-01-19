@@ -1,6 +1,7 @@
 import BuildingCertificationCard from '../components/BuildingCertificationCard'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import PageTitle from '../components/PageTitle'
 import React from 'react'
 import Section from '../components/Section'
 import ZeroEnergyCard from '../components/ZeroEnergyCard'
@@ -60,17 +61,20 @@ const energy_star = {
   },
 }
 
+const header = {
+  title: 'Building Certification',
+  img: "url('/gec_banner_bg.jpg')",
+}
+
 const BuildingCertification = () => {
   return (
     <>
       <Navbar />
-      <div className="m-4">
-        <Section text={'Building Certification'} />
-        <BuildingCertificationCard data={leed_certification} />
-        <BuildingCertificationCard data={green_globes} />
-        <BuildingCertificationCard data={zero_energy} />
-        <BuildingCertificationCard data={energy_star} />
-      </div>
+      <PageTitle data={header} />
+      <BuildingCertificationCard data={leed_certification} />
+      <BuildingCertificationCard data={green_globes} />
+      <BuildingCertificationCard data={zero_energy} />
+      <BuildingCertificationCard data={energy_star} />
       <Footer />
     </>
   )

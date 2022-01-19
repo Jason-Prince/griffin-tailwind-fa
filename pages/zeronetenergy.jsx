@@ -4,6 +4,7 @@ import Image from 'next/image'
 import InfographicContent from '../components/InfographicContent'
 import InfographicImage from '../components/InfographicImage'
 import Navbar from '../components/Navbar'
+import PageTitle from '../components/PageTitle'
 import React from 'react'
 import Section from '../components/Section'
 import SubSection from '../components/SubSection'
@@ -232,18 +233,22 @@ const project_credits = {
   },
 }
 
+const header = {
+  title: 'Zero Net Energy',
+  img: "url('/gec_banner_bg.jpg')",
+}
 const ZeroNetEnergy = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-12 mx-4 gap-y-10 nav:gap-20">
+      <div className="grid grid-cols-12 gap-y-10 nav:gap-20">
         <div className="col-start-1 row-start-1 col-span-full">
-          <Section text={'Zero Net Energy'} />
+          <PageTitle data={header} />
         </div>
-        <div className="col-start-1 row-start-2 nav:col-span-6 col-span-full">
+        <div className="mx-4 col-start-1 row-start-2 nav:col-span-6 col-span-full">
           <InfographicImage data={infographic_1} />
         </div>
-        <div className="col-start-1 row-start-3 col-span-full nav:col-span-6 nav:col-start-7 nav:row-start-2">
+        <div className="mx-4 col-start-1 row-start-3 col-span-full nav:col-span-6 nav:col-start-7 nav:row-start-2">
           <InfographicImage data={infographic_2} />
         </div>
         <div className="col-start-1 row-start-4 col-span-full nav:col-span-8 nav:row-start-3">

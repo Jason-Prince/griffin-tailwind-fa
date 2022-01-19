@@ -1,6 +1,7 @@
 import AboutUsCard from '../components/AboutUsCard'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import PageTitle from '../components/PageTitle'
 import React from 'react'
 
 const david_griffin = {
@@ -18,10 +19,16 @@ const david_griffin = {
   },
 }
 
+const header = {
+  title: 'About Us',
+  img: "url('/gec_banner_bg.jpg')",
+}
+
 const AboutUs = () => {
   return (
     <>
       <Navbar />
+      <PageTitle data={header} />
       <div className="mx-4">
         <AboutUsCard data={david_griffin} />
       </div>

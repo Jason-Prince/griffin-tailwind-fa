@@ -5,7 +5,7 @@ import ZeroText from './ZeroText'
 const ZeroEnergyCard = ({ data }) => {
   const { image, image_2, text } = data
   return (
-    <div className="grid items-center justify-center grid-cols-12 nav:gap-x-10 nav:gap-y-5">
+    <div className="mx-4 grid items-center justify-center grid-cols-12 nav:gap-x-10 nav:gap-y-5">
       {image && (
         <div
           className={`${
