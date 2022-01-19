@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Link from 'next/link'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 const links = [
@@ -55,6 +56,7 @@ const links = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
   return (
     <>
       <nav className="sticky top-0 z-50 grid w-screen grid-cols-12 px-2 py-3 bg-white place-content-center place-items-center">
@@ -74,11 +76,15 @@ export default function Navbar() {
           } row-start-2 col-start-1 col-end-13 col-span-5 nav:col-start-1 nav:col-end-13 nav:grid nav:grid-flow-col nav:row-start-2 nav:gap-2`}
         >
           {links.map((link) => (
-            <Link href={link.href} key={link.name}>
-              <div className="flex px-4 py-2 border-l-2 border-white border-solid cursor-pointer text-dark nav:border-l-0 nav:border-b-2 hover:border-orange place-items-center nav:rounded nav:flex">
+            <Link href={link.href} key={link.name} passHref>
+              <div
+                className={` flex px-4 py-2 border-l-2 border-white border-solid cursor-pointer text-dark nav:border-l-0 nav:border-b-2 hover:border-orange place-items-center nav:rounded nav:flex`}
+              >
                 <FontAwesomeIcon
                   icon={link.icon}
-                  className="col-start-6 col-end-7 mr-2  nav:flex nav:flex-auto nav:mr-2"
+                  className={`${
+                    router.pathname == link.href ? 'text-orange' : ''
+                  } col-start-6 col-end-7 mr-2  nav:flex nav:flex-auto nav:mr-2`}
                 />
                 <a className="col-start-7 col-end-8 row-start-1 tracking-wider uppercase font-Montserrat nav:col-start-1 nav:col-span-12 place-self-start nav:place-self-center ">
                   {link.name}
