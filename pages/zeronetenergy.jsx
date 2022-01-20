@@ -68,7 +68,7 @@ const green_globes = {
   },
   image_2: {
     alt: 'Green Globes Logo',
-    src: '/Green_Globes_Logo.jpg',
+    src: '/green_globes_logo.jpg',
     width: 180,
     height: 151,
     layout: 'intrinsic',

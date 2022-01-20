@@ -22,9 +22,9 @@ const leed_certification = {
 const green_globes = {
   image: {
     alt: 'Green Globe Logo',
-    src: '/gbi_logomark_main.png',
-    width: 1041,
-    height: 557,
+    src: '/GBI_Logo_Main.png',
+    width: 1903,
+    height: 560,
     layout: 'intrinsic',
   },
   text: {
